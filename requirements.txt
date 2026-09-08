@@ -1,3 +1,4 @@
 streamlit
 rembg
 Pillow 
+pyarrow==24.0.0
