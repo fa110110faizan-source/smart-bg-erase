@@ -1,4 +1,5 @@
 streamlit
-rembg
+rembg[cpu]
 Pillow 
 pyarrow==24.0.0
+onnxruntime
