@@ -19,7 +19,14 @@ st.markdown("""
    </style>
 """,unsafe_allow_html=True)
 #File Uploader 
+if "clean_img" not in st.session_state:
+   st.session_state.clean_img = None
+if "prev_uploaded_file" not in st.session_state:
+   st.session_state.prev_uploaded_file = None 
 uploaded_file = st.file_uploader("Apni photo upload karein", type=["png", "jpg", "jpeg"])
+if uploaded_file != st.session_state.prev_uploaded_file:
+   st.session_state.clean_img = None
+   st.session_state.prev_uploaded_file = uploaded_file   
 if uploaded_file is not None:
     # Original Image Display 
     st.subheader("Aapki upload hui photo") 
@@ -31,17 +38,18 @@ if uploaded_file is not None:
             time.sleep(5) # Yeh line 5 seconds tak loading chalaye rakhegi
             session = new_session("u2netp")
             output_image = remove(input_image, session=session)
-            #Output Display 
-            st.subheader("Background Remove Ho Gaya !")
-            st.image(output_image, use_container_width=True)
-            # --- BRIGHTNESS SLIDER ---
-            brightness = st.slider("Enhance Brightness(Chamak)", 0.5, 2.0, 1.0, 0.1)
-            enhancer = ImageEnhance.Brightness(output_image)
-            final_image = enhancer.enhance(brightness)
-            st.image(final_image,use_container_width=True)
-            #Image ko download karne ke liye convert karna 
-            buf = io.BytesIO()
-            final_image.save(buf, format="PNG")
+            st.session_state.clean_img = output_image
+if st.session_state.clean_img is not None:        
+      st.subheader("Background Remove Ho Gaya !")
+      st.image(st.session_state.clean_img, use_container_width=True)
+      # --- BRIGHTNESS SLIDER ---
+      brightness = st.slider("Enhance Brightness(Chamak)", 0.5, 2.0, 1.0, 0.1)
+      enhancer = ImageEnhance.Brightness(st.session_state.clean_img)
+      final_image = enhancer.enhance(brightness)
+      st.image(final_image,use_container_width=True)
+      #Image ko download karne ke liye convert karna 
+      buf = io.BytesIO()
+      final_image.save(buf, format="PNG")
             
             byte_im = buf.getvalue()
             # 2. DOWNLOAD BUTTON 
