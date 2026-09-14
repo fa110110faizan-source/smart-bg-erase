@@ -51,9 +51,9 @@ if st.session_state.clean_img is not None:
       buf = io.BytesIO()
       final_image.save(buf, format="PNG")
             
-            byte_im = buf.getvalue()
-            # 2. DOWNLOAD BUTTON 
-            st.download_button(
+      byte_im = buf.getvalue()
+      # 2. DOWNLOAD BUTTON 
+      st.download_button(
                 label=" Download Clean Image",
                 data=byte_im,
                 file_name="bg_removed.png",
