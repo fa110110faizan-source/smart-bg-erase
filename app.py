@@ -4,7 +4,7 @@ from rembg import remove, new_session
 from PIL import Image,ImageEnhance
 import io 
 #Website Title & Header 
-st.set_page_config(page_title="AI Background Remover", layout="centered")
+st.set_page_config(page_title="Smart BG Erase", page_icon="👑", layout="centered")
 st.title("Professional AI Background Remover")
 st.write("Bhaiyo, Apni photo upload karein aur ek click mein background saaf karein !")
 #Custom CSS for Yellow Button 
@@ -70,3 +70,11 @@ with col3:
     st.caption("**Contact & Support**\n\nHave question or feedback? Reach out to us anytime for support and tool updates.")
 st.markdown("<p style='text-align: center; color: gray; font-size: 12px;'>Copyright 2026 Smart BG Erace | All Rights Reserved</p>", unsafe_allow_html=True)            
     
+# HIDING STREAMLIT BRANDING
+hide_st_style = """
+<style>
+#MainMenu {visibility:hidden;}
+footer {visibility:hidden;}
+</style>
+"""
+st.markdown(hide_st_style,unsafe_allow_html=True
