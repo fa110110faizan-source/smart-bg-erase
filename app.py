@@ -3,7 +3,8 @@ import time
 import streamlit.components.v1 as components
 
 # --- MONETAG VERIFICATION CODE ---
-verification_code = ""<meta name="monetag" content="6d3578b2c52213928343828de8dc8b72">""
+verification_code = '<meta name="monetag" content="6d3578b2c52213928343828de8dc8b72">'
+
 
 components.html(verification_code, height=0, width=0)
 
