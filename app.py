@@ -1,13 +1,15 @@
-import streamlit as st 
+import streamlit as st
 import time
 import streamlit.components.v1 as components
 
-# --- MONETAG VERIFICATION CODE ---
-verification_code = '<meta name="monetag" content="6d3578b2c52213928343828de8dc8b72">'
-
-
-components.html(verification_code, height=0, width=0)
-
+# --- MONETAG VERIFICATION (DIRECT IN HEAD) ---
+st.set_page_config(
+    page_title="Professional AI Background Remover",
+    page_icon="🤖",
+    menu_items={
+        'About': '<meta name="monetag" content="6d3578b2c52213928343828de8dc8b72">'
+    }
+)
 from rembg import remove, new_session
 from PIL import Image,ImageEnhance
 import io 
