@@ -70,11 +70,17 @@ with col3:
     st.caption("**Contact & Support**\n\nHave question or feedback? Reach out to us anytime for support and tool updates.")
 st.markdown("<p style='text-align: center; color: gray; font-size: 12px;'>Copyright 2026 Smart BG Erace | All Rights Reserved</p>", unsafe_allow_html=True)            
     
-# HIDING STREAMLIT BRANDING
+# HIDING STREAMLIT BRANDING PERMANENTLY FOR ALL USERS
 hide_st_style = """
 <style>
-#MainMenu {visibility:hidden;}
-footer {visibility:hidden;}
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+[data-testid="stViewerBadge"] {display:none !important;}
+.viewerBadge_link__z13gW {display:none !important;}
+.styles_viewerBadge__CvC9N {display: none !important;}
+iframe[title="Managed Hosting Badge"] {display: none !important;}
+div[class^="viewerBadge"] {display: none !important;}
 </style>
 """
-st.markdown(hide_st_style,unsafe_allow_html=True)
+st.markdown(hide_st_style, unsafe_allow_html=True)
