@@ -2,6 +2,11 @@ import streamlit as st
 import time
 import streamlit.components.v1 as components
 
+# --- MONETAG DIRECT HTML FILE FIX ---
+if st.query_params.get("page") == "index.html":
+    st.write('<meta name="monetag" content="6d3578b2c52213928343828de8dc8b72">', unsafe_allow_html=True)
+    st.stop()
+
 # --- MONETAG VERIFICATION (DIRECT IN HEAD) ---
 st.set_page_config(
     page_title="Professional AI Background Remover",
