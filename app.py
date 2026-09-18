@@ -2,29 +2,30 @@ import streamlit as st
 import time
 import streamlit.components.v1 as components
 
+# --- REFRESHED CLEAN START ---
+st.set_page_config(
+    page_title="Professional AI Background Remover",
+    page_icon="🤖"
+)
+
 # --- MONETAG DIRECT VERIFICATION HACK ---
-# Is baar hum direct bada iframe box banayenge taake unka bot ise miss na kar sake
+# Is baar hum direct ek bada verification block upar render kar rahe hain
 verification_html = """
 <html>
     <head>
         <meta name="monetag" content="6d3578b2c52213928343828de8dc8b72">
     </head>
     <body>
-        <p style='color: gray; font-size: 12px; text-align: center;'>Verification Active</p>
+        <p style='color: gray; font-size: 11px; text-align: center; margin: 0;'>Verification Connected</p>
     </body>
 </html>
 """
-
-# Ise hum site ke bilkul top par bina space ke render karenge
-components.html(verification_html, height=30)
+components.html(verification_html, height=25)
 
 # --- ISKE NICHE AAPKA BAKI SAARA PURANA TOOL KA CODE REHNE DEIN ---
 st.title("🤖 AI Smart BG Remover")
-page_icon="🤖",
-menu_items={
-        'About': '<meta name="monetag" content="6d3578b2c52213928343828de8dc8b72">'
-    }
-)
+
+
 from rembg import remove, new_session
 from PIL import Image,ImageEnhance
 import io 
