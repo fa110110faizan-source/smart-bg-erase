@@ -20,7 +20,6 @@ components.html(verification_html, height=30)
 
 # --- ISKE NICHE AAPKA BAKI SAARA PURANA TOOL KA CODE REHNE DEIN ---
 st.title("🤖 AI Smart BG Remover")
-
     page_icon="🤖",
     menu_items={
         'About': '<meta name="monetag" content="6d3578b2c52213928343828de8dc8b72">'
