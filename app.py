@@ -2,14 +2,25 @@ import streamlit as st
 import time
 import streamlit.components.v1 as components
 
-# --- MONETAG DIRECT HTML FILE FIX ---
-if st.query_params.get("page") == "index.html":
-    st.write('<meta name="monetag" content="6d3578b2c52213928343828de8dc8b72">', unsafe_allow_html=True)
-    st.stop()
+# --- MONETAG DIRECT VERIFICATION HACK ---
+# Is baar hum direct bada iframe box banayenge taake unka bot ise miss na kar sake
+verification_html = """
+<html>
+    <head>
+        <meta name="monetag" content="6d3578b2c52213928343828de8dc8b72">
+    </head>
+    <body>
+        <p style='color: gray; font-size: 12px; text-align: center;'>Verification Active</p>
+    </body>
+</html>
+"""
 
-# --- MONETAG VERIFICATION (DIRECT IN HEAD) ---
-st.set_page_config(
-    page_title="Professional AI Background Remover",
+# Ise hum site ke bilkul top par bina space ke render karenge
+components.html(verification_html, height=30)
+
+# --- ISKE NICHE AAPKA BAKI SAARA PURANA TOOL KA CODE REHNE DEIN ---
+st.title("🤖 AI Smart BG Remover")
+
     page_icon="🤖",
     menu_items={
         'About': '<meta name="monetag" content="6d3578b2c52213928343828de8dc8b72">'
