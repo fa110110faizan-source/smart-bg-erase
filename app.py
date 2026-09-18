@@ -110,3 +110,17 @@ div[class^="viewerBadge"] {display: none !important;}
 </style>
 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
+
+# ==========================================
+# --- MONETAG CLEAN ADS (FOOTER MEIN) ---
+# ==========================================
+clean_ad_code = """
+<div style="text-align: center; margin-top: 30px;">
+<script>(function(s){s.dataset.zone='11829809',s.src='https://nap5k.com'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+
+</div>
+"""
+
+
+# Yeh line ad ko aapki asli Streamlit site par live dikhayegi
+components.html(clean_ad_code, height=150)
