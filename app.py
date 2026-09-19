@@ -115,12 +115,11 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 # --- MONETAG CLEAN ADS (FOOTER MEIN) ---
 # ==========================================
 clean_ad_code = """
-<div style="text-align: center; margin-top: 30px;">
-<script>(function(s){s.dataset.zone='11829809',s.src='https://nap5k.com'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
-
+<div style="text-align: center; margin-top: 40px; margin-bottom: 40px;">
+    <script>(function(s){s.dataset.zone='11829809',s.src='https://nap5k.com'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
 </div>
 """
 
-
-# Yeh line ad ko aapki asli Streamlit site par live dikhayegi
-components.html(clean_ad_code, height=150)
+# Humne height 150 se badha kar 300 kar di hai taake ad ke liye poori jagah bane
+st.write("---")  # Yeh website par ek saaf line bana dega ad ke upar
+components.html(clean_ad_code, height=300, scrolling=False)
