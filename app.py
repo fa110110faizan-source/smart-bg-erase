@@ -111,16 +111,23 @@ div[class^="viewerBadge"] {display: none !important;}
 """
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
+# -------------------------------------------------------------
+# 🎬 🔥 TRENDING DRAMA CLIPS & DOWNLOAD HUB (REPLACING OLD FOOTER)
+# -------------------------------------------------------------
+st.write("---") # Tool aur drama section ke beech line banayega
 
-# ==========================================
-# --- MONETAG DIRECT LINK ADS (FOOTER) ---
-# ==========================================
-# Monetag wala link maine yahan brackets ke andar daal diya hai:
-direct_link_url = "https://omg10.com"
+# 🔴 SETTINGS: Jab bhi naya drama clip dalo, bas niche wale dono links badal dena!
+monetag_link = "https://extg.com"  # Aapka safe Monetag Direct Link
+actual_drama_link = "https://google.com" # 👈 Yahan aapne asli drama clip/file ka link daalna hai (Drive, Mega, ya YouTube)
 
-st.write("---") # Tool ke niche ek saaf line banayega
-st.write("### ☕ Support Our Free Tool")
-st.write("Agar aapko hamara AI background remover pasand aaya, toh niche diye gaye button par click karke hamari help karein taake hum is tool ko hamesha free rakh sakein!")
+st.markdown("### 🔥 Trending Drama Latest Episodes & Viral Clips HD")
+st.write("Aapki pasandeda viral drama scenes, deleted clips aur full episodes HD me watch/download karne ke liye niche diye gaye dono steps ko follow karein:")
 
-# Yeh line us link ko ek button me badal degi jis par click karne se ad khulegi
-st.link_button("🚀 Click Here to Support (View Ad)", direct_link_url)
+# STEP 1: Monetag Click Button
+st.write("**👉 Step 1:** Niche diye gaye Green Button par click karke hamari website ko support karein aur link ko unlock karein.")
+st.link_button("🚀 Click Here to Support & Unlock Link", monetag_link)
+
+# STEP 2: Asli Drama File Link (Jo ad dekhne ke baad user click karega)
+st.write("**👉 Step 2:** Button par click karne ke baad, niche diye gaye link se apna drama watch/download karein.")
+st.link_button("🎬 Click Here to Watch / Download Drama", actual_drama_link)
+
