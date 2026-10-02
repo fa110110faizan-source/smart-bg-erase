@@ -118,7 +118,7 @@ st.write("---") # Tool aur drama section ke beech line banayega
 
 # 🔴 SETTINGS: Jab bhi naya drama clip dalo, bas niche wale dono links badal dena!
 monetag_link = "https://extg.com"  # Aapka safe Monetag Direct Link
-actual_drama_link = "https://google.com" # 👈 Yahan aapne asli drama clip/file ka link daalna hai (Drive, Mega, ya YouTube)
+actual_drama_link = "https://drive.google.com/file/d/1VVHYLPGEbRCmQKYnklKnbwpIU3Bts3W3/view?usp=sharing" # 👈 Yahan aapne asli drama clip/file ka link daalna hai (Drive, Mega, ya YouTube)
 
 st.markdown("### 🔥 Trending Drama Latest Episodes & Viral Clips HD")
 st.write("Aapki pasandeda viral drama scenes, deleted clips aur full episodes HD me watch/download karne ke liye niche diye gaye dono steps ko follow karein:")
